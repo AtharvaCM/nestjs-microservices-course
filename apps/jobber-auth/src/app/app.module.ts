@@ -1,8 +1,9 @@
-import { Module } from '@nestjs/common';
-
-import { PrismaModule } from './prisma/prisma.module';
-import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
+import { Module } from '@nestjs/common';
+import { GraphQLModule } from '@nestjs/graphql';
+
+import { UsersModule } from '../users/users.module';
+import { PrismaModule } from './prisma/prisma.module';
 
 @Module({
   imports: [
@@ -11,6 +12,7 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
       autoSchemaFile: true,
     }),
     PrismaModule,
+    UsersModule,
   ],
   controllers: [],
   providers: [],
