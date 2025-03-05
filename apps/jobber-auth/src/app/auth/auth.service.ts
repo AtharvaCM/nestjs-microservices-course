@@ -5,7 +5,7 @@ import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
 
-import { UsersService } from '../../users/users.service';
+import { UsersService } from '../users/users.service';
 import { LoginInput } from './dto/login.input';
 import { TokenPayload } from './token-payload.interface';
 
