@@ -14,7 +14,7 @@ import { PrismaModule } from './prisma/prisma.module';
       driver: ApolloDriver,
       playground: {
         settings: {
-          'request.credentials': 'incldue',
+          'request.credentials': 'include',
         },
       },
       context: ({ req, res }) => ({ req, res }),
